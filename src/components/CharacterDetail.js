@@ -14,20 +14,25 @@ const CharacterDetail = props => {
 
     return (
       <React.Fragment>
-        <Link to="/" className="character__detail--link">
-          {" "}
-          Volver{" "}
-        </Link>
-        <div className="character__detail">
-          <div className="character__detail--img">
-            <img src={image} alt={`We introduce you to ${name}`} />
-          </div>
-          <div className="character__detail--info">
-            <h3 className="character__detail--name">{name}</h3>
-            <p className="character__detail--status">{`Status: ${status}`}</p>
-            <p className="character__detail--species">{`Species: ${species}`}</p>
-            <p className="character__detail--origin">{`Origin: ${origin.name}`}</p>
-            <p className="character__detail--episode">{`Episodes: ${episode.length}`}</p>
+        <div className="character__detail--column">
+          <div className="character__detail">
+            <Link to="/" className="character__detail--link">
+              {" "}
+              Volver{" "}
+            </Link>
+
+            <div className="character__detail--container">
+              <div className="character__detail--img">
+                <img src={image} alt={`We introduce you to ${name}`} />
+              </div>
+              <div className="character__detail--info">
+                <h3 className="character__detail--name">{name}</h3>
+                <p className="character__detail--status">{`Status: ${status}`}</p>
+                <p className="character__detail--species">{`Species: ${species}`}</p>
+                <p className="character__detail--origin">{`Origin: ${origin.name}`}</p>
+                <p className="character__detail--episode">{`Episodes: ${episode.length}`}</p>
+              </div>
+            </div>
           </div>
         </div>
       </React.Fragment>

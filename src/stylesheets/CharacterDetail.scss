@@ -1,39 +1,51 @@
 .character__detail {
-  background-color: #5dbcd2;
-  color: white;
   display: flex;
-  padding: 20px;
-  font-family: "Merriweather Sans", sans-serif;
-  margin-top: 10px;
-  width: 600px;
+  flex-direction: column;
+  justify-content: center;
+  &--column {
+    width: 600px;
+  }
+  &--container {
+    background-color: #5dbcd2;
+    color: white;
+    display: flex;
+    padding: 20px;
+    font-family: "Merriweather Sans", sans-serif;
+    margin: 0;
+    margin-top: 5px;
+  }
   &--link {
     text-decoration: none;
     color: white;
     font-family: "Merriweather Sans", sans-serif;
-    margin-top: 70px;
+    font-size: 18px;
+    align-self: flex-end;
   }
   &--info {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
-    text-align: left;
     padding-top: 50px;
     font-size: 20px;
   }
-
   &--name {
     margin: 2px;
+    text-align: left;
   }
   &--status {
     margin: 2px;
+    text-align: left;
   }
   &--species {
     margin: 2px;
+    text-align: left;
   }
   &--origin {
     margin: 2px;
+    text-align: left;
   }
   &--episode {
     margin: 2px;
+    text-align: left;
   }
 }

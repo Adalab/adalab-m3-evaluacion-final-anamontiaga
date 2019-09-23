@@ -16,6 +16,7 @@ class App extends React.Component {
       query: ""
     };
     this.getCharacterQuery = this.getCharacterQuery.bind(this);
+    // this.getCharacterStatus = this.getCharacterStatus.bind(this);
   }
   componentDidMount() {
     this.getCharacters();
@@ -32,11 +33,19 @@ class App extends React.Component {
     this.setState({ query: query });
   }
 
+  // getCharacterStatus() {
+  //   const status = characters.filter(item => item.status === "Alive");
+
+  //   this.setState({
+  //     [status]: "hello"
+  //   });
+  // }
+
   render() {
     const { characters, query } = this.state;
     return (
-      <div className="App">
-        <div className="app_logo">
+      <div className="app">
+        <div className="app__logo">
           <img src={logo} alt="Welcome to Rick and Morty world" className="app_logo--img" />
         </div>
         <Switch>
@@ -50,7 +59,7 @@ class App extends React.Component {
           <Route
             path="/character/:id"
             render={routerProps => {
-              return <CharacterDetail routerProps={routerProps} characters={characters} />;
+              return <CharacterDetail routerProps={routerProps} characters={characters} state={this.state} getCharacterStatus={this.getCharacterStatus} />;
             }}
           />
         </Switch>
