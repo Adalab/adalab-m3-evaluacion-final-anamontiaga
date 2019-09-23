@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import CharacterCard from "./CharacterCard";
 
 const CharacterList = props => {
   const { characters } = props;
@@ -7,18 +9,16 @@ const CharacterList = props => {
       {characters.map(character => {
         return (
           <li className="character" key={`key${character.id}`}>
-            <div className="character__img">
-              <img src={character.image} alt={`We introduce you to ${character.name}`} />
-            </div>
-            <div className="character__card">
-              <h3 className="character__card--name">{character.name}</h3>
-              <h5 className="character__card--species">{character.species}</h5>
-            </div>
+            <CharacterCard image={character.image} name={character.name} species={character.species} />
           </li>
         );
       })}
     </ul>
   );
+};
+
+CharacterList.propTypes = {
+  characters: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default CharacterList;
