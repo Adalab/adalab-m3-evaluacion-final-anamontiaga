@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { fetchCharacters } from "./services/fetchCharacters";
 import logo from "./images/logo.png";
+import CharacterList from "./components/CharacterList";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,13 +24,13 @@ class App extends React.Component {
 
   render() {
     const { characters } = this.state;
-    console.log(characters);
     return (
       <div className="App">
         <div className="app_logo">
           <img src={logo} alt="Welcome to Rick and Morty world" className="app_logo--img" />
         </div>
-        <ul className="characters">
+        <CharacterList characters={characters} />
+        {/* <ul className="characters">
           {characters.map(character => {
             return (
               <li className="character" key={`key${character.id}`}>
@@ -43,7 +44,7 @@ class App extends React.Component {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     );
   }
