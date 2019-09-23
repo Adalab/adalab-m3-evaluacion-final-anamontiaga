@@ -1,0 +1,20 @@
+.character {
+  &__filters {
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  &__filter {
+    height: 35px;
+    width: 400px;
+    box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #9df280, 0 0 4vw 0.4vw #47ed00, inset 0 0 1.5vw 0.4vw #9df280, inset 0 0 0.4vw 0.2vw #c4f4a7, inset 0 0 0.5vw 0.2vw #fff7f7;
+    border-radius: 10px;
+    background-color: black;
+    padding-left: 20px;
+  }
+  &__filter[type="text"] {
+    color: white;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 18px;
+  }
+}

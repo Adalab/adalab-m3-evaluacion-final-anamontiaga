@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import "../stylesheets/CharacterDetail.scss";
 
 const CharacterDetail = props => {
   const { routerProps, characters } = props;
@@ -21,11 +22,13 @@ const CharacterDetail = props => {
           <div className="character__detail--img">
             <img src={image} alt={`We introduce you to ${name}`} />
           </div>
-          <h3 className="character__detail--name">{name}</h3>
-          <p className="character__detail--status">{`Status: ${status}`}</p>
-          <p className="character__detail--species">{`Species: ${species}`}</p>
-          <p className="character__detail--origin">{`Origin: ${origin.name}`}</p>
-          <p className="character__detail--episode">{`Episodes: ${episode.length}`}</p>
+          <div className="character__detail--info">
+            <h3 className="character__detail--name">{name}</h3>
+            <p className="character__detail--status">{`Status: ${status}`}</p>
+            <p className="character__detail--species">{`Species: ${species}`}</p>
+            <p className="character__detail--origin">{`Origin: ${origin.name}`}</p>
+            <p className="character__detail--episode">{`Episodes: ${episode.length}`}</p>
+          </div>
         </div>
       </React.Fragment>
     );

@@ -1,0 +1,17 @@
+.character {
+  &__container {
+    background-color: #5dbcd2;
+    color: white;
+    padding-bottom: 5px;
+    width: 300px;
+  }
+  &__card {
+    &--name {
+      margin-bottom: 10px;
+    }
+    &--species {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+}

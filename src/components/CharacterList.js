@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import { Link } from "react-router-dom";
+import "../stylesheets/CharacterList.scss";
 
 const CharacterList = props => {
   const { characters, query } = props;

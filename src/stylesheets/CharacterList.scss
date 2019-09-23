@@ -1,0 +1,16 @@
+.characters {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 0;
+  width: 1260px;
+  justify-self: center;
+}
+
+.character {
+  &__link {
+    text-decoration: none;
+    font-family: "Merriweather Sans", sans-serif;
+  }
+}
