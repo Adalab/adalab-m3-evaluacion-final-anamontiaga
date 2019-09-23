@@ -46,7 +46,12 @@ class App extends React.Component {
               return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} />;
             }}
           />
-          <Route path="/character" component={CharacterDetail} />
+          <Route
+            path="/character/:id"
+            render={routerProps => {
+              return <CharacterDetail routerProps={routerProps} characters={characters} />;
+            }}
+          />
         </Switch>
       </div>
     );

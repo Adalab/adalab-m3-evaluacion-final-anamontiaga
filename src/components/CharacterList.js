@@ -12,7 +12,7 @@ const CharacterList = props => {
         .map(character => {
           return (
             <li className="character" key={`key${character.id}`}>
-              <Link to="/character" className="character__link">
+              <Link to={`/character/${character.id}`} className="character__link">
                 <CharacterCard image={character.image} name={character.name} species={character.species} />
               </Link>
             </li>
