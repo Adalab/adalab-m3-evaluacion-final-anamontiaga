@@ -16,7 +16,6 @@ class App extends React.Component {
       query: ""
     };
     this.getCharacterQuery = this.getCharacterQuery.bind(this);
-    // this.getCharacterStatus = this.getCharacterStatus.bind(this);
   }
   componentDidMount() {
     this.getCharacters();
@@ -33,20 +32,17 @@ class App extends React.Component {
     this.setState({ query: query });
   }
 
-  // getCharacterStatus() {
-  //   const status = characters.filter(item => item.status === "Alive");
-
-  //   this.setState({
-  //     [status]: "hello"
-  //   });
-  // }
+  filteredName(routerProps) {
+    const id = parseInt(routerProps.match.params.id);
+    return this.state.characters.find(item => item.id === id);
+  }
 
   render() {
     const { characters, query } = this.state;
     return (
       <div className="app">
         <div className="app__logo">
-          <img src={logo} alt="Welcome to Rick and Morty world" className="app_logo--img" />
+          <img src={logo} alt="Welcome to Rick and Morty world" className="app__logo--img" />
         </div>
         <Switch>
           <Route
@@ -59,7 +55,7 @@ class App extends React.Component {
           <Route
             path="/character/:id"
             render={routerProps => {
-              return <CharacterDetail routerProps={routerProps} characters={characters} state={this.state} getCharacterStatus={this.getCharacterStatus} />;
+              return <CharacterDetail character={this.filteredName(routerProps)} />;
             }}
           />
         </Switch>

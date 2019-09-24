@@ -2,59 +2,148 @@
   &__error--back {
     text-decoration: none;
     color: white;
+    text-shadow: 0px 0px 80px #39ff14, 0px 0px 20px #39ff14;
     font-family: "Merriweather Sans", sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 5px;
   }
   &__detail {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &--img {
+      width: 150px;
+    }
     &--column {
-      width: 600px;
+      width: 280px;
     }
     &--container {
       background-color: #5dbcd2;
       color: white;
       display: flex;
-      padding: 20px;
+      padding: 10px;
       font-family: "Merriweather Sans", sans-serif;
       margin: 0;
       margin-top: 5px;
     }
     &--link {
       text-decoration: none;
-      color: white;
       font-family: "Merriweather Sans", sans-serif;
-      font-size: 18px;
+      font-size: 12px;
       align-self: flex-end;
+      color: white;
+      text-shadow: 0px 0px 80px #39ff14, 0px 0px 20px #39ff14;
     }
     &--info {
       display: flex;
       flex-direction: column;
-      margin-left: 30px;
-      padding-top: 50px;
-      font-size: 20px;
+      margin-left: 10px;
+      font-size: 10px;
+      color: white;
+      text-shadow: 0px 0px 80px #39ff14, 0px 0px 20px #39ff14;
     }
     &--name {
-      margin: 2px;
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 10px;
       text-align: left;
     }
     &--status {
-      margin: 2px;
+      margin-top: 4px;
+      margin-bottom: 0;
       text-align: left;
     }
     &--species {
-      margin: 2px;
+      margin-top: 4px;
+      margin-bottom: 0;
       text-align: left;
     }
     &--origin {
-      margin: 2px;
+      margin-top: 4px;
+      margin-bottom: 0;
       text-align: left;
     }
     &--episode {
-      margin: 2px;
+      margin-top: 4px;
+      margin-bottom: 0;
       text-align: left;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .character {
+    &__error--back {
+      font-size: 16px;
+    }
+    &__detail {
+      &--info {
+        margin-left: 20px;
+      }
+      &--name {
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      &--img {
+        width: 200px;
+      }
+      &--column {
+        width: 500px;
+      }
+      &--container {
+        padding: 16px;
+      }
+      &--link {
+        font-size: 18px;
+      }
+      &--info {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media all and (min-width: 1200px) {
+  .character {
+    &__error--back {
+      font-size: 18px;
+    }
+    &__detail {
+      &--info {
+        margin-left: 20px;
+      }
+      &--name {
+        font-size: 30px;
+        margin-bottom: 38px;
+        text-align: left;
+      }
+      &--status {
+        margin-top: 14px;
+      }
+      &--species {
+        margin-top: 14px;
+      }
+      &--origin {
+        margin-top: 14px;
+      }
+      &--episode {
+        margin-top: 14px;
+      }
+      &--img {
+        width: 300px;
+      }
+      &--column {
+        width: 600px;
+      }
+      &--container {
+        padding: 20px;
+      }
+      &--link {
+        font-size: 20px;
+      }
+      &--info {
+        font-size: 20px;
+      }
     }
   }
 }
