@@ -26,7 +26,11 @@ This is an exercise of Ana Montiaga proposed by Adalab and for Adalab, during th
 
 ## Available Scripts
 
-In the project directory, you can run:
+To start you can install node modules, Sass, propTypes and React Router at the same time:
+
+#### `npm install --save react-router-dom node-sass prop-types`
+
+Next, in the project directory, you can run:
 
 #### `npm start`
 
