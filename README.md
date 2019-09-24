@@ -9,13 +9,13 @@ These instructions will allow you to obtain a copy of the project in operation o
 Clone, download or fork: 
   
   #### If you want to clone, go to Terminal and:
-  [git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git](git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git)
+   ####  `git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git`
   
   #### If you want to download or fork go to next link:
-   [https://github.com/Adalab/m3-evaluacion-final-anamontiaga](#https://github.com/Adalab/m3-evaluacion-final-anamontiaga)
+    #### [https://github.com/Adalab/m3-evaluacion-final-anamontiaga](#https://github.com/Adalab/m3-evaluacion-final-anamontiaga)
 
   #### If you want to update your fork from original repo to keep up with their changes:
-  [git pull upstream master] (git pull upstream master)
+  #### `git pull upstream master] (#git pull upstream master)
   
   
 ## Developed with ⌨️
