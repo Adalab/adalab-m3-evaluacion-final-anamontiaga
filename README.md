@@ -1,4 +1,4 @@
-## Ricky & Morty Character Finder
+# Ricky & Morty Character Finder
 With this search engine you can find detailed information about each of the characters of the American TV series.
 This project have been made with ReactJS.
 
@@ -8,20 +8,21 @@ These instructions will allow you to obtain a copy of the project in operation o
 ## Deployment ⚙️
 Clone, download or fork: 
   
-  1. To Clone: Go to Terminal and:
-  ### `git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git´
+  ### To Clone: Go to Terminal and:
+   `git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git´
   
-  2. To download or fork: 
-  ### go `https://github.com/Adalab/m3-evaluacion-final-anamontiaga´
+  ### To download or fork go
+   `https://github.com/Adalab/m3-evaluacion-final-anamontiaga´
 
-  3. If you want to update your fork from original repo to keep up with their changes:
-  ### `git pull upstream master´
+  ### If you want to update your fork from original repo to keep up with their changes:
+  `git pull upstream master´
   
 ## Developed with ⌨️
 ReactJS, Babel and Sass.
 
-Authors ✒️
+## Authors ✒️
 This is an exercise of Ana Montiaga proposed by Adalab and for Adalab, during the development of the final test of module 3.
+
 
 ## Available Scripts
 
