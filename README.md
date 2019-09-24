@@ -12,10 +12,10 @@ Clone, download or fork:
    ####  `git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git`
   
   #### If you want to download or fork go to next link:
-    #### [https://github.com/Adalab/m3-evaluacion-final-anamontiaga](#https://github.com/Adalab/m3-evaluacion-final-anamontiaga)
+   [https://github.com/Adalab/m3-evaluacion-final-anamontiaga](#https://github.com/Adalab/m3-evaluacion-final-anamontiaga)
 
   #### If you want to update your fork from original repo to keep up with their changes:
-  #### `git pull upstream master] (#git pull upstream master)
+  #### `git pull upstream master`
   
   
 ## Developed with ⌨️
