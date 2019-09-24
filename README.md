@@ -9,7 +9,7 @@ These instructions will allow you to obtain a copy of the project in operation o
 Clone, download or fork: 
   
   #### If you want to clone, go to Terminal and:
-  [git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git](#git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git)
+  [git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git](git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git)
   
   #### If you want to download or fork go to next link:
    [https://github.com/Adalab/m3-evaluacion-final-anamontiaga](#https://github.com/Adalab/m3-evaluacion-final-anamontiaga)
