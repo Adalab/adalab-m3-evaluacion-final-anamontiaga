@@ -1,54 +1,27 @@
-Ricky & Morty Character Finder
+## Ricky & Morty Character Finder
 With this search engine you can find detailed information about each of the characters of the American TV series.
 This project have been made with ReactJS.
 
-Starting 🚀
+## Starting 🚀 
 These instructions will allow you to obtain a copy of the project in operation on your local machine for development and testing purposes.
 
-Pre-requisitos 📋
-Que cosas necesitas para instalar el software y como instalarlas
+## Deployment ⚙️
+Clone, download or fork: 
+  
+  1. To Clone: Go to Terminal and:
+  ### `git clone https://github.com/Adalab/m3-evaluacion-final-anamontiaga.git´
+  
+  2. To download or fork: 
+  ### go `https://github.com/Adalab/m3-evaluacion-final-anamontiaga´
 
-Da un ejemplo
-Instalación 🔧
-Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose
-
-Dí cómo será ese paso
-
-Da un ejemplo
-Y repite
-
-hasta finalizar
-Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo
-
-Ejecutando las pruebas ⚙️
-Explica como ejecutar las pruebas automatizadas para este sistema
-
-Analice las pruebas end-to-end 🔩
-Explica que verifican estas pruebas y por qué
-
-Da un ejemplo
-Y las pruebas de estilo de codificación ⌨️
-Explica que verifican estas pruebas y por qué
-
-Da un ejemplo
-Deployment 📦
-Agrega notas adicionales sobre como hacer deploy
-
-Construido con 🛠️
-Menciona las herramientas que utilizaste para crear tu proyecto
-
-Dropwizard - El framework web usado
-Maven - Manejador de dependencias
-ROME - Usado para generar RSS
-Contribuyendo 🖇️
-Por favor lee el CONTRIBUTING.md para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
-
-Wiki 📖
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra Wiki
+  3. If you want to update your fork from original repo to keep up with their changes:
+  ### `git pull upstream master´
+  
+## Developed with ⌨️
+ReactJS, Babel and Sass.
 
 Authors ✒️
 This is an exercise of Ana Montiaga proposed by Adalab and for Adalab, during the development of the final test of module 3.
-
 
 ## Available Scripts
 
