@@ -7,8 +7,8 @@ const CharacterCard = props => {
 
   return (
     <div className="character__container">
-      <div className="character__img">
-        <img src={image} alt={`We introduce you to ${name}`} />
+      <div className="character__img--container">
+        <img className="character__img" src={image} alt={`We introduce you to ${name}`} />
       </div>
       <div className="character__card">
         <h3 className="character__card--name">{name}</h3>
