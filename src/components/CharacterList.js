@@ -26,12 +26,12 @@ const CharacterList = props => {
 CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   query: PropTypes.string.isRequired,
-  wantedCharacter: PropTypes.object.isRequired,
-  character: PropTypes.object.isRequired,
-  id: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  species: PropTypes.object.isRequired
+  wantedCharacter: PropTypes.object,
+  character: PropTypes.object,
+  id: PropTypes.string,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  species: PropTypes.object
 };
 
 export default CharacterList;

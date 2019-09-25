@@ -61,15 +61,15 @@ const CharacterDetail = props => {
 };
 
 CharacterDetail.propTypes = {
-  characters: PropTypes.arrayOf(PropTypes.object).isRequired,
-  character: PropTypes.object.isRequired,
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
-  origin: PropTypes.string.isRequired,
-  episode: PropTypes.string.isRequired,
-  deadStatus: PropTypes.string.isRequired
+  characters: PropTypes.arrayOf(PropTypes.object),
+  character: PropTypes.object,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  species: PropTypes.string,
+  status: PropTypes.string,
+  origin: PropTypes.string,
+  episode: PropTypes.string,
+  deadStatus: PropTypes.string
 };
 
 export default CharacterDetail;
