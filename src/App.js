@@ -13,9 +13,15 @@ class App extends React.Component {
 
     this.state = {
       characters: [],
-      query: ""
+      query: "",
+      queryGender: "all",
+      queryEpisodes: "",
+      querySpecie: []
     };
     this.getCharacterQuery = this.getCharacterQuery.bind(this);
+    this.getGender = this.getGender.bind(this);
+    this.getEpisodes = this.getEpisodes.bind(this);
+    this.getSpecie = this.getSpecie.bind(this);
   }
   componentDidMount() {
     this.getCharacters();
@@ -37,8 +43,35 @@ class App extends React.Component {
     return this.state.characters.find(item => item.id === id);
   }
 
+  getGender(event) {
+    const query = event.currentTarget.value;
+    this.setState({ queryGender: query });
+  }
+
+  getEpisodes(event) {
+    const query = event.currentTarget.value;
+    this.setState({ queryEpisodes: query });
+  }
+
+  getSpecie(event) {
+    const query = event.currentTarget.value;
+    this.setState(prevState => {
+      const NewSpecie = [...prevState.querySpecie];
+      const result = NewSpecie.findIndex(item => item === query);
+
+      if (result < 0) {
+        NewSpecie.push(query);
+      } else {
+        NewSpecie.splice(result, 1);
+      }
+      return {
+        querySpecie: NewSpecie
+      };
+    });
+  }
+
   render() {
-    const { characters, query } = this.state;
+    const { characters, query, queryGender, queryEpisodes } = this.state;
     return (
       <div className="app">
         <div className="app__logo">
@@ -49,7 +82,7 @@ class App extends React.Component {
             exact
             path="/"
             render={() => {
-              return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} />;
+              return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} queryGender={queryGender} getGender={this.getGender} queryEpisodes={queryEpisodes} getEpisodes={this.getEpisodes} />;
             }}
           />
           <Route

@@ -11,12 +11,36 @@
     border-radius: 10px;
     background-color: transparent;
     padding-left: 20px;
+    &--gender,
+    &--episodes {
+      margin-top: 25px;
+      margin-right: 20px;
+      color: white;
+      font-family: "Merriweather Sans", sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__filter[type="text"] {
     color: white;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 18px;
   }
+}
+.search__character--gender,
+.search__character--episodes {
+  &--select,
+  &--label {
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: "Merriweather Sans", sans-serif;
+    width: 100px;
+  }
+}
+
+.character__filters--improvements {
+  display: flex;
+  flex-direction: row;
 }
 
 @media all and (min-width: 768px) {
