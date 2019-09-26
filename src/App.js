@@ -16,13 +16,16 @@ class App extends React.Component {
       query: "",
       queryGender: "",
       queryEpisodes: "",
+      querySecondEpisodes: "0",
       querySpecie: "all"
     };
     this.getCharacterQuery = this.getCharacterQuery.bind(this);
     this.getGender = this.getGender.bind(this);
     this.getEpisodes = this.getEpisodes.bind(this);
     this.getSpecie = this.getSpecie.bind(this);
+    this.filteredEpisodes = this.filteredEpisodes.bind(this);
   }
+
   componentDidMount() {
     this.getCharacters();
   }
@@ -40,13 +43,17 @@ class App extends React.Component {
 
   filteredName(routerProps) {
     const id = parseInt(routerProps.match.params.id);
-    console.log(routerProps);
     return this.state.characters.find(item => item.id === id);
   }
 
   getGender(event) {
     const query = event.currentTarget.value;
     this.setState({ queryGender: query });
+  }
+
+  filteredEpisodes(ev) {
+    const query = ev.currentTarget.value;
+    this.setState({ querySecondEpisodes: query });
   }
 
   getEpisodes(event) {
@@ -60,7 +67,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { characters, query, queryGender, queryEpisodes, querySpecie } = this.state;
+    const { characters, query, queryGender, queryEpisodes, querySpecie, querySecondEpisodes } = this.state;
     return (
       <div className="app">
         <div className="app__logo">
@@ -71,7 +78,7 @@ class App extends React.Component {
             exact
             path="/"
             render={() => {
-              return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} queryGender={queryGender} getGender={this.getGender} queryEpisodes={queryEpisodes} getEpisodes={this.getEpisodes} querySpecie={querySpecie} getSpecie={this.getSpecie} />;
+              return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} queryGender={queryGender} getGender={this.getGender} queryEpisodes={queryEpisodes} getEpisodes={this.getEpisodes} querySpecie={querySpecie} getSpecie={this.getSpecie} filteredEpisodes={this.filteredEpisodes} querySecondEpisodes={querySecondEpisodes} />;
             }}
           />
           <Route

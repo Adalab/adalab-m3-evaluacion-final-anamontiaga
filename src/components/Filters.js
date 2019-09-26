@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import "../stylesheets/Filters.scss";
 
 const Filters = props => {
-  const { getCharacterQuery, query, getGender, queryGender, getEpisodes, queryEpisodes, getSpecie } = props;
-
-  //quitar props de query
+  const { getCharacterQuery, query, getGender, queryGender, getEpisodes, queryEpisodes, getSpecie, filteredEpisodes, querySecondEpisodes } = props;
 
   return (
     <div className="character__filters">
@@ -49,6 +47,7 @@ const Filters = props => {
             <input id="alien" type="radio" name="specie" value="Alien" onChange={getSpecie} />
           </label>
         </div>
+        <input className="character__filter--episodes__text" type="text" onChange={filteredEpisodes} value={querySecondEpisodes} />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../stylesheets/CharacterList.scss";
 
 const CharacterList = props => {
-  const { characters, query, queryGender, queryEpisodes, querySpecie } = props;
+  const { characters, query, queryGender, queryEpisodes, querySpecie, querySecondEpisodes } = props;
   return (
     <ul className="characters">
       {characters
@@ -23,9 +23,9 @@ const CharacterList = props => {
           }
         })
         .filter(character => {
-          console.log(character.species);
           return querySpecie === "all" ? true : querySpecie === character.species;
         })
+        .filter(character => (parseInt(querySecondEpisodes) === character.episode.length ? true : "0"))
         .map(character => {
           return (
             <li className="character" key={`key${character.id}`}>
