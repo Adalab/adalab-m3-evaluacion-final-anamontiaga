@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 import "../stylesheets/Filters.scss";
 
 const Filters = props => {
-  const { getCharacterQuery, query, getGender, queryGender, getEpisodes, queryEpisodes } = props;
-  console.log(queryEpisodes);
+  const { getCharacterQuery, query, getGender, queryGender, getEpisodes, queryEpisodes, getSpecie } = props;
+
+  //quitar props de query
+
   return (
     <div className="character__filters">
       <input className="character__filter" type="text" onChange={getCharacterQuery} value={query} />
@@ -30,6 +32,22 @@ const Filters = props => {
             <option value="1-15">More than 1, less than 15</option>
             <option value="more15">More than 15</option>
           </select>
+        </div>
+        <div className="character__filter--specie">
+          {" "}
+          By specie:
+          <label htmlFor="">
+            Select an option:
+            <input id="option" type="radio" name="specie" value="option" />
+          </label>
+          <label htmlFor="human">
+            Human
+            <input id="human" type="radio" name="specie" value="Human" onChange={getSpecie} />
+          </label>
+          <label htmlFor="alien">
+            Alien
+            <input id="alien" type="radio" name="specie" value="Alien" onChange={getSpecie} />
+          </label>
         </div>
       </div>
     </div>

@@ -4,11 +4,11 @@ import CharacterList from "./CharacterList";
 import PropTypes from "prop-types";
 
 const Home = props => {
-  const { getCharacterQuery, query, characters, queryGender, getGender, queryEpisodes, getEpisodes } = props;
+  const { getCharacterQuery, query, characters, queryGender, getGender, queryEpisodes, getEpisodes, querySpecie, getSpecie } = props;
   return (
     <React.Fragment>
-      <Filters getCharacterQuery={getCharacterQuery} value={query} queryGender={queryGender} getGender={getGender} queryEpisodes={queryEpisodes} getEpisodes={getEpisodes} />
-      <CharacterList characters={characters} query={query} value={query} queryGender={queryGender} queryEpisodes={queryEpisodes} />
+      <Filters getCharacterQuery={getCharacterQuery} value={query} queryGender={queryGender} getGender={getGender} queryEpisodes={queryEpisodes} getEpisodes={getEpisodes} getSpecie={getSpecie} />
+      <CharacterList characters={characters} query={query} value={query} queryGender={queryGender} queryEpisodes={queryEpisodes} querySpecie={querySpecie} />
     </React.Fragment>
   );
 };

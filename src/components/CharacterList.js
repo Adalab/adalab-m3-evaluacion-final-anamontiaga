@@ -5,14 +5,12 @@ import { Link } from "react-router-dom";
 import "../stylesheets/CharacterList.scss";
 
 const CharacterList = props => {
-  const { characters, query, getGender, queryGender, queryEpisodes } = props;
-  console.log(queryGender);
-
+  const { characters, query, queryGender, queryEpisodes, querySpecie } = props;
   return (
     <ul className="characters">
       {characters
         .filter(character => character.name.toUpperCase().includes(query.toUpperCase()))
-        .filter(character => (queryGender === "all" ? true : queryGender === character.gender))
+        .filter(character => (queryGender === "" ? true : queryGender === character.gender))
         .filter(character => {
           if (queryEpisodes === "") {
             return true;
@@ -24,11 +22,15 @@ const CharacterList = props => {
             return character.episode.length >= 15;
           }
         })
+        .filter(character => {
+          console.log(character.species);
+          return querySpecie === "all" ? true : querySpecie === character.species;
+        })
         .map(character => {
           return (
             <li className="character" key={`key${character.id}`}>
               <Link to={`/character/${character.id}`} className="character__link">
-                <CharacterCard image={character.image} name={character.name} species={character.species} queryGender={queryGender} getGender={getGender} />
+                <CharacterCard image={character.image} name={character.name} species={character.species} />
               </Link>
             </li>
           );
