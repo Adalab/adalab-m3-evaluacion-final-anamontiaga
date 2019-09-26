@@ -16,7 +16,7 @@ class App extends React.Component {
       query: "",
       queryGender: "",
       queryEpisodes: "",
-      querySecondEpisodes: "0",
+      querySecondEpisodes: "",
       querySpecie: "all"
     };
     this.getCharacterQuery = this.getCharacterQuery.bind(this);

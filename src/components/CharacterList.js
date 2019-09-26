@@ -6,6 +6,7 @@ import "../stylesheets/CharacterList.scss";
 
 const CharacterList = props => {
   const { characters, query, queryGender, queryEpisodes, querySpecie, querySecondEpisodes } = props;
+  console.log(querySecondEpisodes);
   return (
     <ul className="characters">
       {characters
@@ -25,7 +26,9 @@ const CharacterList = props => {
         .filter(character => {
           return querySpecie === "all" ? true : querySpecie === character.species;
         })
-        .filter(character => (parseInt(querySecondEpisodes) === character.episode.length ? true : "0"))
+        .filter(character => {
+          return parseInt(querySecondEpisodes) === character.episode.length ? true : "all";
+        })
         .map(character => {
           return (
             <li className="character" key={`key${character.id}`}>
