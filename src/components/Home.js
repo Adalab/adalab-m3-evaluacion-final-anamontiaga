@@ -4,11 +4,12 @@ import CharacterList from "./CharacterList";
 import PropTypes from "prop-types";
 
 const Home = props => {
-  const { getCharacterQuery, query, characters } = props;
+  const { getCharacterQuery, query, characters, queryStatus, getAliveStatus } = props;
+
   return (
     <React.Fragment>
-      <Filters getCharacterQuery={getCharacterQuery} value={query} />
-      <CharacterList characters={characters} query={query} value={query} />
+      <Filters getCharacterQuery={getCharacterQuery} value={query} queryStatus={queryStatus} getAliveStatus={getAliveStatus} />
+      <CharacterList characters={characters} query={query} value={query} queryStatus={queryStatus} />
     </React.Fragment>
   );
 };

@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import "../stylesheets/CharacterList.scss";
 
 const CharacterList = props => {
-  const { characters, query } = props;
+  const { characters, query, queryStatus } = props;
   return (
     <ul className="characters">
       {characters
         .filter(wantedCharacter => wantedCharacter.name.toUpperCase().includes(query.toUpperCase()))
+        .filter(character => (queryStatus === "all" ? true : queryStatus === character.status))
         .map(character => {
           return (
             <li className="character" key={`key${character.id}`}>

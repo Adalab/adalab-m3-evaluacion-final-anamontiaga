@@ -13,9 +13,11 @@ class App extends React.Component {
 
     this.state = {
       characters: [],
-      query: ""
+      query: "",
+      queryStatus: "all"
     };
     this.getCharacterQuery = this.getCharacterQuery.bind(this);
+    this.getAliveStatus = this.getAliveStatus.bind(this);
   }
   componentDidMount() {
     this.getCharacters();
@@ -37,8 +39,13 @@ class App extends React.Component {
     return this.state.characters.find(item => item.id === id);
   }
 
+  getAliveStatus(event) {
+    const query = event.currentTarget.value;
+    this.setState({ queryStatus: query });
+  }
+
   render() {
-    const { characters, query } = this.state;
+    const { characters, query, queryStatus } = this.state;
     return (
       <div className="app">
         <div className="app__logo">
@@ -49,7 +56,7 @@ class App extends React.Component {
             exact
             path="/"
             render={() => {
-              return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} />;
+              return <Home getCharacterQuery={this.getCharacterQuery} characters={characters} query={query} value={query} queryStatus={queryStatus} getAliveStatus={this.getAliveStatus} />;
             }}
           />
           <Route
